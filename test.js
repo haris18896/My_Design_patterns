@@ -13,3 +13,6 @@ class StaticMethodCall {
     return 'static method has been called.'
   }
 }
+
+let instance = new StaticMethodCall()
+console.log(instance)

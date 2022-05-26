@@ -212,4 +212,8 @@ class StaticMethodCall {
   }
 }
 
+let instance = new StaticMethodCall()
+console.log(instance)
+
+
 // *****************************************************************************************
