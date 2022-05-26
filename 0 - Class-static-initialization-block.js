@@ -1,14 +1,13 @@
 // simple Square Class
 class Square {
-  constructor(height, width) {
-    this.height = height
-    this.width = width
+  constructor(side) {
+    this.side = side
   }
   area() {
-    return this.height * this.width
+    return this.side * this.side
   }
 }
-let mySquare = new Square(10, 20)
+let mySquare = new Square(10)
 
 console.log(mySquare.area())
 // *****************************************************************************************
