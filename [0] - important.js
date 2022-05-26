@@ -1,0 +1,1 @@
+// write a script that prints the following: operations.add(1).add(5).add(9)  // output: 15
