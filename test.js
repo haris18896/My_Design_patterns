@@ -1,6 +1,12 @@
 class Operations {
+  value(n) {
+    this.n = n
+    return this
+  }
+
   add(n) {
-    return n
+    this.n += value(n)
+    return this
   }
 }
 
