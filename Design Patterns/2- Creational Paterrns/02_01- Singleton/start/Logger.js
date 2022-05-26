@@ -14,12 +14,5 @@ class Logger {
   }
 }
 
-class Singleton {
-  constructor() {
-    if (!Singleton.instance) {
-      Singleton.instance = new Logger()
-    }
-  }
-}
-
-module.exports = Logger
+// module.exports = Logger
+module.export = new Logger()
