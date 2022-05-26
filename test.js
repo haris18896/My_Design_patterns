@@ -1,14 +1,17 @@
-class Operations {
-  value(n) {
-    this.n = n
-    return this
+class OperationBuilder {
+  constructor() {
+    this.value = 0
   }
 
   add(n) {
-    this.n += value(n)
+    this.value += n
     return this
+  }
+
+  show() {
+    return this.value
   }
 }
 
-// console.log(OperationsWithStatic.add(1).add(5).add(9)) // output: 15
-console.log(Operations.add(1)) // output: 2
+let adder = new OperationBuilder().add(1).add(5).add(9)
+console.log(adder.show())

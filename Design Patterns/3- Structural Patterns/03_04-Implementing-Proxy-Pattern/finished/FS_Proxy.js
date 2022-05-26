@@ -1,28 +1,22 @@
 class FS_Proxy {
+  constructor(fs_subject) {
+    this.fs = fs_subject
+  }
 
-    constructor(fs_subject) {
-        this.fs = fs_subject;
+  readFile(path, format, callback) {
+    if (!path.match(/.md$|.MD$/)) {
+      return callback(new Error(`Can only read Markdown files.`))
     }
 
-    readFile(path, format, callback) {
+    this.fs.readFile(path, format, (error, contents) => {
+      if (error) {
+        console.error(error)
+        return callback(error)
+      }
 
-        if (!path.match(/.md$|.MD$/)) {
-            return callback(new Error(`Can only read Markdown files.`));
-        }
-
-        this.fs.readFile(path, format, (error, contents) => {
-
-            if (error) {
-                console.error(error);
-                return callback(error);
-            }
-
-            return callback(null, contents);
-
-        })
-
-    }
-
+      return callback(null, contents)
+    })
+  }
 }
 
-module.exports = FS_Proxy;
+module.exports = FS_Proxy
