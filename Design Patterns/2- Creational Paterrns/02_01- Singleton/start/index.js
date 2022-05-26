@@ -1,9 +1,8 @@
-// var Logger = require('./Logger')
+var Logger = require('./Logger')
 var Shopper = require('./Shopper')
 var Store = require('./Store')
 
-// var logger = new Logger()
-var logger = require('./Logger')
+var logger = new Logger()
 
 logger.log('starting app...')
 

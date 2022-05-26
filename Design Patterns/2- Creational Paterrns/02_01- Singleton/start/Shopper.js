@@ -1,6 +1,6 @@
-// var Logger = require('./Logger');
-// var logger = new Logger();
-var logger = require('./Logger')
+var Logger = require('./Logger')
+
+var logger = new Logger()
 
 class Shopper {
   constructor(name, money = 0) {

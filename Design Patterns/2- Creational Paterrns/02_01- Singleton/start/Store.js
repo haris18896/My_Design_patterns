@@ -1,7 +1,6 @@
-// var Logger = require('./Logger');
+var Logger = require('./Logger')
 
-// var logger = new Logger();
-var logger = require('./Logger')
+var logger = new Logger()
 
 class Store {
   constructor(name, inventory = []) {
