@@ -1,26 +1,32 @@
-const Singleton = (() => {
-  let instance
+function CustomerPrototype(proto) {
+  this.proto = proto
 
-  const createInstance = () => {
-    let object = new Object('this is an instance')
-    return object
+  this.clone = () => {
+    let customer = new Customer()
+    customer.first = proto.first
+    customer.last = proto.last
+    customer.status = proto.status
+
+    return customer
   }
+}
 
-  return {
-    getInstance: function () {
-      if (!instance) {
-        instance = createInstance()
-      }
-      return instance
-    }
+function Customer(first, last, status) {
+  this.first = first
+  this.last = last
+  this.status = status
+
+  this.say = () => {
+    console.log(`name: ${this.first} ${this.last}, status : ${this.status}`)
   }
-})()
+}
 
-const run = () => {
-  let inst1 = Singleton.getInstance()
-  let inst2 = Singleton.getInstance()
+function run() {
+  let proto = new Customer('haris', 'ahmad', 'success')
+  let prototype = new CustomerPrototype(proto)
 
-  console.log(`same Instance ? ${inst1 === inst2}`)
+  let customer = prototype.clone()
+  customer.say()
 }
 
 run()
