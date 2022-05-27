@@ -3,6 +3,10 @@ class Operations {
   constructor(builder) {
     this.value = builder.value || 0
   }
+
+  show() {
+    return this.value
+  }
 }
 
 class OperationBuilder {
@@ -20,8 +24,8 @@ class OperationBuilder {
   }
 }
 
-console.log(new OperationBuilder().add(1).add(5).add(9).build())
-
+let add = new OperationBuilder().add(1).add(5).add(9).build()
+console.log(add.show())
 // ***************************************************************************************
 class Operations {
   constructor() {
