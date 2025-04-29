@@ -1,3 +1,52 @@
+### 1. **Creational Patterns** – *Handle object creation efficiently*
+
+- **Singleton**: Ensures a class has only one instance.  
+  *Use when only one instance is needed (e.g., DB connection).*
+
+- **Prototype**: Clones existing objects instead of creating new ones.  
+  *Use when object creation is costly.*
+
+- **Factory**: Delegates object creation to subclasses.  
+  *Use when you want to return objects without exposing the instantiation logic.*
+
+- **Builder**: Separates object construction from its representation.  
+  *Use for building complex objects step by step.*
+
+---
+
+### 2. **Structural Patterns** – *Simplify relationships between objects*
+
+- **Adapter**: Converts one interface to another.  
+  *Use to make incompatible interfaces work together.*
+
+- **Proxy**: Acts as a substitute for another object.  
+  *Use for access control, lazy loading, or logging.*
+
+- **Composite**: Treats individual objects and groups uniformly.  
+  *Use for hierarchical structures like UI trees.*
+
+- **Decorator**: Adds behavior to objects dynamically.  
+  *Use to extend object functionality without modifying code.*
+
+---
+
+### 3. **Behavioral Patterns** – *Manage algorithms and responsibilities*
+
+- **Chain of Responsibility**: Passes request along a chain of handlers.  
+  *Use to decouple sender and receiver.*
+
+- **Command**: Encapsulates a request as an object.  
+  *Use to queue, log, or undo operations.*
+
+- **Iterator**: Provides a way to access elements without exposing structure.  
+  *Use for list traversal.*
+
+- **Observer**: Notifies multiple objects of state changes.  
+  *Use for pub-sub systems (e.g., UI updates).*
+
+- **Strategy**: Selects algorithm behavior at runtime.  
+  *Use to choose different logic based on context.*
+
 # Design Patterns
 
 # Creational Patterns
